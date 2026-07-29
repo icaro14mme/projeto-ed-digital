@@ -17,3 +17,10 @@ color: #000000 ;
     background-color: #1f2020;
     color: #FFFF00;
 }
+button {
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #FFFF00;
+
+}
