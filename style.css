@@ -1,18 +1,15 @@
 header {
     background-color: #000000;
     color: white;
-
 } 
 .INOHA {
 background-color: #00F8F8;
 color: #000000 ;
-background-image: url("imgs/inoha.jpeg");
-
 } 
 .Nirvana {
     background-color: #000000;
     color: #FFFF00;
-    background-image: url("imgs/Never-Mind-capa.jpg");
+
 }
 button {
     font-size: 30px;
