@@ -1,37 +1,819 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ICON -->
-    <link rel="icon" href="imgs/favicon-rock-icon.jpg">
-    <title>Significado das musicas</title>
-</head>
-<body>
-<!-- CABEÇALHO -->
-<header>
-    <h1> Nirvana origem curiosidades e historia</h1>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>NIRVANA | História, Música e Legado</title>
+
+    <meta
+      name="description"
+      content="Site sobre o Nirvana, sua história, origem, integrantes, Kurt Cobain, discografia e legado."
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Permanent+Marker&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Inter, Arial, sans-serif;
+        background: #080808;
+        color: #eee;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* =========================
+   NAVBAR
+========================= */
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 50;
+
+        background: rgba(0, 0, 0, 0.86);
+        backdrop-filter: blur(10px);
+
+        border-bottom: 1px solid #252525;
+      }
+
+      .nav-inner {
+        max-width: 1150px;
+        margin: auto;
+
+        padding: 16px 24px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-weight: 900;
+        letter-spacing: 4px;
+        color: #d8ff00;
+        font-size: 20px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 22px;
+
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .nav-links a:hover {
+        color: #d8ff00;
+      }
+
+      /* =========================
+   HERO
+========================= */
+
+      .hero {
+        min-height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 110px 25px 60px;
+
+        position: relative;
+        overflow: hidden;
+
+        background:
+          radial-gradient(
+            circle at 50% 45%,
+            rgba(216, 255, 0, 0.09),
+            transparent 28%
+          ),
+          linear-gradient(135deg, #080808, #151515 55%, #050505);
+      }
+
+      .hero::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        opacity: 0.12;
+
+        background-image: radial-gradient(#fff 1px, transparent 1px);
+
+        background-size: 8px 8px;
+      }
+
+      .hero-content {
+        position: relative;
+        max-width: 900px;
+      }
+
+      .badge {
+        display: inline-block;
+
+        border: 1px solid #d8ff00;
+
+        color: #d8ff00;
+
+        padding: 7px 14px;
+
+        border-radius: 20px;
+
+        font-size: 12px;
+        font-weight: 800;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 22px;
+      }
+
+      h1 {
+        font-size: clamp(70px, 15vw, 170px);
+
+        line-height: 0.8;
+
+        letter-spacing: -8px;
+
+        font-weight: 900;
+
+        color: #d8ff00;
+
+        text-shadow: 6px 6px 0 #111;
+      }
+
+      .hero p {
+        max-width: 700px;
+
+        margin: 32px auto 0;
+
+        color: #bbb;
+
+        font-size: 18px;
+      }
+
+      .scroll {
+        display: inline-block;
+
+        margin-top: 40px;
+
+        color: #111;
+
+        background: #d8ff00;
+
+        padding: 12px 20px;
+
+        font-weight: 800;
+
+        border-radius: 4px;
+      }
+
+      .scroll:hover {
+        transform: translateY(-2px);
+      }
+
+      /* =========================
+   SEÇÕES
+========================= */
+
+      section {
+        padding: 95px 24px;
+
+        max-width: 1150px;
+
+        margin: auto;
+      }
+
+      .section-title {
+        font-size: 42px;
+
+        line-height: 1.05;
+
+        margin-bottom: 15px;
+
+        text-transform: uppercase;
+      }
+
+      .section-title span {
+        color: #d8ff00;
+      }
+
+      .subtitle {
+        color: #999;
+
+        max-width: 700px;
+
+        margin-bottom: 42px;
+      }
+
+      /* =========================
+   CARDS
+========================= */
+
+      .grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 20px;
+      }
+
+      .card {
+        background: #111;
+
+        border: 1px solid #292929;
+
+        padding: 28px;
+
+        border-radius: 10px;
+
+        transition: 0.25s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+
+        border-color: #d8ff00;
+      }
+
+      .card h3 {
+        font-size: 22px;
+
+        margin-bottom: 10px;
+
+        color: #d8ff00;
+      }
+
+      .card p {
+        color: #bbb;
+
+        font-size: 15px;
+      }
+
+      /* =========================
+   TIMELINE
+========================= */
+
+      .timeline {
+        border-left: 2px solid #d8ff00;
+
+        margin: 35px 0 0 12px;
+
+        padding-left: 28px;
+      }
+
+      .event {
+        margin-bottom: 35px;
+
+        position: relative;
+      }
+
+      .event::before {
+        content: "";
+
+        position: absolute;
+
+        left: -38px;
+        top: 7px;
+
+        width: 14px;
+        height: 14px;
+
+        background: #d8ff00;
+
+        border-radius: 50%;
+
+        box-shadow: 0 0 0 5px #080808;
+      }
+
+      .year {
+        font-size: 14px;
+
+        color: #d8ff00;
+
+        font-weight: 900;
+
+        letter-spacing: 2px;
+      }
+
+      .event h3 {
+        font-size: 24px;
+
+        margin: 4px 0;
+      }
+
+      .event p {
+        color: #aaa;
+
+        max-width: 800px;
+      }
+
+      /* =========================
+   KURT COBAIN
+========================= */
+
+      .kurt {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 45px;
+
+        align-items: center;
+      }
+
+      .kurt-box {
+        background: #d8ff00;
+
+        color: #080808;
+
+        padding: 42px;
+
+        border-radius: 8px;
+
+        transform: rotate(-1deg);
+      }
+
+      .kurt-box h3 {
+        font-size: 48px;
+
+        line-height: 1;
+
+        margin-bottom: 15px;
+      }
+
+      .quote {
+        font-family: "Permanent Marker", cursive;
+
+        font-size: 25px;
+
+        line-height: 1.35;
+
+        color: #d8ff00;
+      }
+
+      /* =========================
+   DISCOGRAFIA
+========================= */
+
+      .albums {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 20px;
+      }
+
+      .album {
+        min-height: 260px;
+
+        padding: 25px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: flex-end;
+
+        border: 1px solid #303030;
+
+        border-radius: 8px;
+
+        background: linear-gradient(145deg, #171717, #090909);
+      }
+
+      .album .num {
+        font-size: 50px;
+
+        font-weight: 900;
+
+        color: #333;
+
+        position: absolute;
+      }
+
+      .album h3 {
+        font-size: 25px;
+
+        color: #d8ff00;
+
+        position: relative;
+      }
+
+      .album p {
+        color: #aaa;
+
+        font-size: 14px;
+
+        position: relative;
+      }
+
+      /* =========================
+   NÚMEROS
+========================= */
+
+      .fact {
+        font-size: 52px;
+
+        font-weight: 900;
+
+        color: #d8ff00;
+
+        line-height: 1;
+      }
+
+      /* =========================
+   FOOTER
+========================= */
+
+      footer {
+        border-top: 1px solid #242424;
+
+        text-align: center;
+
+        padding: 45px 20px;
+
+        color: #777;
+      }
+
+      footer strong {
+        color: #d8ff00;
+      }
+
+      /* =========================
+   RESPONSIVO
+========================= */
+
+      @media (max-width: 800px) {
+        .nav-links {
+          display: none;
+        }
+
+        .grid,
+        .albums {
+          grid-template-columns: 1fr;
+        }
+
+        .kurt {
+          grid-template-columns: 1fr;
+        }
+
+        section {
+          padding: 70px 20px;
+        }
+
+        .section-title {
+          font-size: 34px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================
+     NAVBAR
+========================= -->
 
     <nav>
-        <ul>
-            <li href="#inicio">inicio</li>
-            <li href="#origem">origem</li>
-            <li href="#historia">historia</li>
-            <li href="#albuns">álbuns</li>
-            <li href="#curiosidades">curiosidades</li>
-        </ul>
+      <div class="nav-inner">
+        <a class="logo" href="#inicio"> NIRVANA </a>
+
+        <div class="nav-links">
+          <a href="#historia"> História </a>
+
+          <a href="#integrantes"> Integrantes </a>
+
+          <a href="#kurt"> Kurt Cobain </a>
+
+          <a href="#discografia"> Discografia </a>
+
+          <a href="#legado"> Legado </a>
+        </div>
+      </div>
     </nav>
-</header>
 
-<main>
+    <!-- =========================
+     HERO
+========================= -->
 
-    <section id="inicio" class="hero"></section>
+    <header class="hero" id="inicio">
+      <div class="hero-content">
+        <div class="badge">ABERDEEN • WASHINGTON • 1987</div>
 
-</main>
+        <h1>NIRVANA</h1>
 
+        <p>
+          Uma das bandas que transformaram o rock no início dos anos 1990.
+          Conheça a origem, a trajetória, os integrantes, Kurt Cobain e o legado
+          que continua ecoando.
+        </p>
 
-    
-    
-</body>
+        <a class="scroll" href="#historia"> ENTRAR NA HISTÓRIA ↓ </a>
+      </div>
+    </header>
+
+    <!-- =========================
+     HISTÓRIA
+========================= -->
+
+    <section id="historia">
+      <h2 class="section-title">A <span>história</span></h2>
+
+      <p class="subtitle">
+        Do underground de Washington ao topo das paradas, o Nirvana ajudou a
+        colocar o grunge no centro da cultura popular.
+      </p>
+
+      <div class="timeline">
+        <div class="event">
+          <div class="year">1987</div>
+
+          <h3>O começo</h3>
+
+          <p>
+            Kurt Cobain e Krist Novoselic formaram a banda em Aberdeen,
+            Washington. Após algumas mudanças de formação e nomes, o grupo
+            passou a ser conhecido como Nirvana.
+          </p>
+        </div>
+
+        <div class="event">
+          <div class="year">1989</div>
+
+          <h3>Bleach</h3>
+
+          <p>
+            O álbum de estreia,
+            <strong>Bleach</strong>, foi lançado pelo selo independente Sub Pop.
+            O som era pesado, cru e fortemente ligado ao underground de Seattle.
+          </p>
+        </div>
+
+        <div class="event">
+          <div class="year">1991</div>
+
+          <h3>Nevermind</h3>
+
+          <p>
+            <strong>Nevermind</strong>
+            levou o Nirvana a uma audiência mundial. O sucesso de "Smells Like
+            Teen Spirit" ajudou a mudar o cenário do rock.
+          </p>
+        </div>
+
+        <div class="event">
+          <div class="year">1993</div>
+
+          <h3>In Utero</h3>
+
+          <p>
+            O terceiro álbum de estúdio apresentou um som mais áspero e
+            experimental, mantendo a identidade da banda enquanto ela lidava com
+            a enorme fama.
+          </p>
+        </div>
+
+        <div class="event">
+          <div class="year">1994</div>
+
+          <h3>O fim</h3>
+
+          <p>
+            Após a morte de Kurt Cobain em abril de 1994, o Nirvana chegou ao
+            fim. A influência da banda, porém, continuou crescendo ao longo das
+            décadas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     INTEGRANTES
+========================= -->
+
+    <section id="integrantes">
+      <h2 class="section-title">Os <span>integrantes</span></h2>
+
+      <p class="subtitle">
+        A formação mais conhecida do Nirvana ficou marcada pela combinação de
+        guitarra, baixo e bateria que definiu boa parte do som da banda.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Kurt Cobain</h3>
+
+          <p>
+            Vocalista, guitarrista e principal compositor. Sua voz, suas letras
+            e seu estilo de guitarra se tornaram símbolos do rock dos anos 1990.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Krist Novoselic</h3>
+
+          <p>
+            Baixista e cofundador. Sua presença no baixo foi fundamental para a
+            sonoridade do Nirvana e para a parceria musical com Cobain.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Dave Grohl</h3>
+
+          <p>
+            Baterista da formação mais famosa, entrou em 1990. Depois do fim do
+            Nirvana, fundou o Foo Fighters e construiu uma nova carreira de
+            enorme sucesso.
+          </p>
+        </article>
+      </div>
+
+      <p style="margin-top: 22px; color: #777; font-size: 13px">
+        A banda também teve outros bateristas antes de Dave Grohl, incluindo
+        Chad Channing e Dale Crover.
+      </p>
+    </section>
+
+    <!-- =========================
+     KURT COBAIN
+========================= -->
+
+    <section id="kurt">
+      <div class="kurt">
+        <div>
+          <h2 class="section-title">Kurt <span>Cobain</span></h2>
+
+          <p class="subtitle">
+            Kurt Donald Cobain nasceu em 20 de fevereiro de 1967, em Aberdeen,
+            Washington. Como compositor e líder do Nirvana, tornou-se uma das
+            figuras mais reconhecidas do rock alternativo.
+          </p>
+
+          <p style="color: #aaa">
+            Sua composição misturava melodias pop, distorção, punk e uma
+            abordagem emocionalmente intensa. Cobain também era conhecido por
+            questionar a indústria musical e os padrões de celebridade que
+            vieram com o sucesso da banda.
+          </p>
+        </div>
+
+        <div class="kurt-box">
+          <div class="quote">
+            "A música do Nirvana nunca precisou parecer perfeita. Ela precisava
+            parecer verdadeira."
+          </div>
+
+          <p style="margin-top: 20px; font-weight: 800">
+            KURT COBAIN • 1967–1994
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+     DISCOGRAFIA
+========================= -->
+
+    <section id="discografia">
+      <h2 class="section-title">Disco<span>grafia</span></h2>
+
+      <p class="subtitle">
+        Três álbuns de estúdio formam o núcleo da discografia do Nirvana.
+      </p>
+
+      <div class="albums">
+        <article class="album">
+          <span class="num"> 01 </span>
+
+          <h3>Bleach</h3>
+
+          <p>1989 • estreia</p>
+        </article>
+
+        <article class="album">
+          <span class="num"> 02 </span>
+
+          <h3>Nevermind</h3>
+
+          <p>1991 • explosão mundial</p>
+        </article>
+
+        <article class="album">
+          <span class="num"> 03 </span>
+
+          <h3>In Utero</h3>
+
+          <p>1993 • último álbum de estúdio</p>
+        </article>
+      </div>
+
+      <div class="grid" style="margin-top: 20px">
+        <article class="card">
+          <div class="fact">1994</div>
+
+          <p>
+            MTV Unplugged in New York foi lançado após a morte de Cobain e
+            tornou-se um dos registros ao vivo mais conhecidos da banda.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="fact">1996</div>
+
+          <p>
+            From the Muddy Banks of the Wishkah reuniu performances ao vivo de
+            diferentes momentos da carreira.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="fact">30+</div>
+
+          <p>
+            Décadas depois, o catálogo do Nirvana continua sendo redescoberto
+            por novas gerações de ouvintes.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================
+     LEGADO
+========================= -->
+
+    <section id="legado">
+      <h2 class="section-title">O <span>legado</span></h2>
+
+      <p class="subtitle">
+        O Nirvana foi muito além de uma banda de grunge. Sua importância está na
+        forma como mudou a relação entre rock alternativo, cultura jovem e
+        grande indústria musical.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>🎸 Grunge</h3>
+
+          <p>
+            A banda ajudou a levar a estética e o som da cena de Seattle para um
+            público global.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>🔥 Influência</h3>
+
+          <p>
+            Artistas de diferentes gerações continuam citando o Nirvana como
+            referência de composição, atitude e sonoridade.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>🌎 Cultura</h3>
+
+          <p>
+            O impacto da banda ultrapassou a música, influenciando moda,
+            comportamento e a representação da juventude nos anos 1990.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================
+     FOOTER
+========================= -->
+
+    <footer>
+      <p>
+        <strong>NIRVANA</strong>
+        • História, música e legado
+      </p>
+
+      <p style="margin-top: 8px">Projeto educacional • Conteúdo informativo</p>
+    </footer>
+  </body>
 </html>
